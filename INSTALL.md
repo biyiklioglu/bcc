@@ -7,7 +7,7 @@
   - [Arch](#arch---aur)
   - [Gentoo](#gentoo---portage)
   - [openSUSE](#opensuse---binary)
-  - [RHEL](#redhat---binary)
+  - [Red Hat Enterprise Linux (RHEL)](#red-hat-enterprise-linux-rhel---binary)
 * [Source](#source)
   - [Debian](#debian---source)
   - [Ubuntu](#ubuntu---source)
@@ -146,12 +146,15 @@ sudo zypper ref
 sudo zypper in bcc-tools bcc-examples
 ```
 
-## RHEL - Binary
+## Red Hat Enterprise Linux (RHEL) - Binary
 
-For Redhat 7.6 (Beta) bcc is already included in the official yum repository as bcc-tools. As part of the install the following dependencies are installed: bcc.x86_64 0:0.6.0-3.el7 ,llvm-private.x86_64 0:6.0.1-2.el7 ,python-bcc.x86_64 0:0.6.0-3.el7,python-netaddr.noarch 0:0.7.5-9.el7
 
-```
-yum install bcc-tools
+Red Hat Enterprise Linux 7.6 (Beta) introduces the Extended Berkeley Packet Filter tool (eBPF) as a Technology Preview. Currently it is enabled only for the tracing subsystem. For details, see the Red Hat Knowledgebase article at https://access.redhat.com/articles/3550581.
+
+BPF Compiler Collection (bcc) tool and the bcc-tools package, which provides many pre-created programs built using bcc, are also provided and available under the Red Hat Enterprise Linux 7 Beta channel. They can be installed using yum.  
+
+```bash
+sudo yum install bcc bcc-tools
 ```
 
 # Source
